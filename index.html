@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Кликер</title>
+    <style>
+        #button1, #button2{
+          background-color: #f4511e;
+          border: none;
+          color: white;
+          padding: 16px 32px;
+          text-align: center;
+          font-size: 32px;
+          margin: 4px 2px;
+          opacity: 0.6;
+          transition: 0.3s;
+          display: inline-block;
+          text-decoration: none;
+          cursor: pointer;
+            height: 50px;
+            width: 150px;
+            line-height: 50px;
+        }
+        #button:hover {opacity: 1}
+    </style>
+</head>
+<body>
+<h3>НАЖМИ НА <text id="tx"></text>КНОПКУ </h3><br />
+<label for="button1">​ПЛЮС</label>
+
+<div id="button1" onclick="click1()" >0</div>
+<label for="button2">​МИНУС</label>
+    <div id="button2" onclick="click2()" name="-">0</div>
+<script>
+  clicks_count=0
+    function click1() {
+     clicks_count++
+        document.getElementById("button1").innerHTML=clicks_count
+         document.getElementById("button2").innerHTML=clicks_count
+    }
+    function click2() {
+     clicks_count--
+        document.getElementById("button1").innerHTML=clicks_count
+        document.getElementById("button2").innerHTML=clicks_count
+    }
+    </script>
+    </body>
+</html>
